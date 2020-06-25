@@ -1,0 +1,8 @@
+node{
+   stage('BUILD'){
+    def mvn = 'maven'
+    withEnv( ["PATH+MAVEN=${tool mvn}/bin"] ) {
+     sh "mvn clean install"
+    }
+   }
+ }
